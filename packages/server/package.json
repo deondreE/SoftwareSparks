@@ -7,7 +7,7 @@
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node .",
+    "start": "nodemon node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,10 +16,13 @@
   "dependencies": {
     "@prisma/client": "^4.3.1",
     "@types/express": "^4.17.13",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/morgan": "^1.9.3",
     "@types/node": "^18.7.15",
+    "nodemon": "^2.0.19",
     "prisma": "^4.3.1",
     "ts-node": "^10.9.1",
     "tslint": "^6.1.3",
