@@ -1,0 +1,14 @@
+// global settings
+// ------------------------------------
+@import '../sass/__Variables.scss';
+
+:root {
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    -webkit-text-size-adjust: $webkit-text-size-adjust;
+    -webkit-tap-highlight-color: $webkit-tap-highlight-color;
+    color: $light;
+    background-color: $dark;
+}

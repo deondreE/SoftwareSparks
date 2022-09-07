@@ -1,0 +1,80 @@
+
+// Font Vairiables
+$font-family: 'Roboto', sans-serif;
+$font-size: 16px;
+$line-height: 1.5;
+$color: #212529;
+$webkit-text-size-adjust: 100%;
+$webkit-tap-highlight-color: transparent;
+
+// Padding
+$xl: 2rem;
+$l: 1.5rem;
+$m: 1rem;
+$s: 0.5rem;
+$xs: 0.25rem;
+
+
+// Font Sizes
+$xl : 2.5rem;
+$l : 2rem;
+$m : 1.5rem;
+$s : 1rem;
+$xs : 0.75rem;
+
+// Font wieghts
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// colors
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Text alignment
+$text-left: left;
+$text-right: right;
+$text-center: center;
+
+// Theme Colors
+$themes: (
+    light: (
+        color-background: #FAFAFA,
+        color-card: #FFF,
+    ),
+    dark: (
+        color-background: #37474F,
+        color-card: #212121
+    )
+);
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+);
+
+// Global Vairiables
+$border-radius: 0.25rem;
+$border-width: 1px;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+
+// Animation Varibles
+$transition: all 0.2s ease-in-out;
+$transition-fast: all 0.1s ease-in-out;
+$transition-slow: all 0.3s ease-in-out;
+$transition-slower: all 0.5s ease-in-out;
+$transition-slowest: all 1s ease-in-out;
+

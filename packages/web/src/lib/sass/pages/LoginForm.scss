@@ -1,0 +1,114 @@
+@import '../_Variables';
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    width: 50vw;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $primary;
+    text-align: center;
+}
+
+.login-form__header {
+    font-size: $xl;
+    font-weight: $font-weight-bold;
+    color: $dark;
+}
+
+.login-form__title {
+    font-size: $l;
+    font-weight: $font-weight-normal;
+    color: $dark;
+}
+
+.login-form__subtitle {
+    font-size: $m;
+    font-weight: $font-weight-light;
+    color: $dark;  
+}
+
+.login-form__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form__input {
+    width: 65%;
+    height: 3rem;
+    margin: $s;
+    padding: $s;
+    border: none;
+    border-radius: 5px;
+    font-size: $m;
+    font-weight: $font-weight-normal;
+    color: $dark;
+    background-color: $light;
+}
+
+.login-form__label {
+    font-size: $m;
+    font-weight: $font-weight-normal;
+    color: $dark;
+    margin-right: $s;
+}
+
+.login-form__input-field {
+    width: 60%;
+    height: 2rem;
+    padding: $xs;
+    border: none;
+    border-radius: 5px;
+    font-size: $m;
+    font-weight: $font-weight-light;
+    color: $dark;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $dark;
+    }
+
+    &:-ms-input-placeholder {
+        color: $dark;
+    }
+}
+
+.login-form__button {
+    width: 65%;
+    height: 3rem;
+    padding: $xs;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: $m;
+    font-weight: $font-weight-normal;
+    color: $light;
+    background-color: $dark;
+
+    margin-left: 1rem;
+
+    &:hover {
+        background-color: $primary;
+    }
+
+    &:active {
+        background-color: $secondary;
+    }
+
+    &:focus {
+        background-color: $success;
+    }
+
+    &:disabled {
+        background-color: $danger;
+    }
+}
