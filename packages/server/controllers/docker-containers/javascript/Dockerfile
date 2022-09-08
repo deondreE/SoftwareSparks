@@ -4,4 +4,6 @@ ENV NODE_ENV production
 
 WORKDIR /
 
+COPY ./temp.js /
+
 CMD [ "node", "temp.js" ]

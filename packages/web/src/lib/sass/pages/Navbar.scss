@@ -1,0 +1,15 @@
+@import '../__Variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $light;
+    width: 100%;
+    
+}
+
+.navbar-logo {
+    width: 100px;
+    height: 100px;
+    margin-left: $s;
+}

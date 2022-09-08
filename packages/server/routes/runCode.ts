@@ -1,6 +1,7 @@
 import * as child from 'child_process';
 import * as express from 'express';
 
+
 import { createCodeFile, runCode } from '../utils/runcode.package';
 
 const router = express.Router();
@@ -11,13 +12,13 @@ router.post('/', async (req, res) => {
     const programmingLang = req.body.programmingLang;
 
     // Create a file with the code
-    const filePath = await createCodeFile(code, programmingLang);
+    await createCodeFile(code, programmingLang);
 
     // Run the code
-    const output = runCode(programmingLang);
+
 
     // Send the output back to the client
-    res.send(output);
+    res.json(await runCode(programmingLang, true));
 });
 
 export default router;
