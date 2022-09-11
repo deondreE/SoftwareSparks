@@ -34,6 +34,10 @@ function NavButton() {
 
   return (
     <>
+      <button className="text-3xl text-black bg-red-200 p-4 border border-red-300">
+        Button
+        <a href="#" />
+      </button>
       <button className="login-button" onClick={login}>
         Sign up
       </button>

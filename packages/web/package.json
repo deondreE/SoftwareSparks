@@ -12,10 +12,6 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
-    "@emotion/core": "^11.0.0",
-    "@emotion/styled": "^11.10.4",
-    "@emotion/types": "^0.7.0",
-    "@monaco-editor/react": "^4.4.5",
     "@types/defaults": "^1.0.3",
     "defaults": "^1.0.3",
     "react": "^18.2.0",
@@ -39,7 +35,6 @@
     "eslint-plugin-react": "^7.31.7",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
-    "tailwind": "^4.0.0",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
