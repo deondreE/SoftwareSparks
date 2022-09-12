@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import PhotosUI
+import CodeEditorView
 
 
 func save() {
@@ -15,52 +15,18 @@ func save() {
 }
 
 struct ContentView: View {
-    @State private var image: Image?
-    @State private var fliterIntensity = 0.5
-    
-    var body: some View {
-        NavigationView {
-            VStack {
-                ZStack {
-                    Rectangle()
-                        .fill(.secondary)
-                    
-                    Text("Tap to select picture")
-                        .foregroundColor(.white)
-                        .font(.headline);
-                    
-                    image?
-                        .resizable()
-                        .scaledToFit()
-                }
-                
-                .onTapGesture {
-                    // Select the image OnTap
-                    
-                }
-                
-                HStack {
-                    Text("Intensity")
-                    Slider(value: $fliterIntensity)
-                }
-                .padding(.vertical)
-                
-                HStack {
-                    Button("Change Filter") {
-                        // change filter
-                    }
-                    
-                    Spacer ()
-                    
-                    Button("Save") {
-                        // save the picture
-                    }
-                }
-            }
-            .padding([.horizontal, .bottom])
-            .navigationTitle("Instaifier")
-        }
-    }
+    @State private var text:     String                = "My awesome code..."
+      @State private var messages: Set<Located<Message>> = Set ()
+
+      @Environment(\.colorScheme) private var colorScheme: ColorScheme
+
+      @SceneStorage("editPosition") private var editPosition: CodeEditor.Position = CodeEditor.Position()
+
+      var body: some View {
+        CodeEditor(text: $text, position: $editPosition, messages: $messages, language: .swift)
+          .environment(\.codeEditorTheme,
+                       colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight)
+      }
 }
 
 struct ContentView_Previews: PreviewProvider {

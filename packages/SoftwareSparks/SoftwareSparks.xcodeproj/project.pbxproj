@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C46CE06228CED2E600ECB3C2 /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = C46CE06128CED2E600ECB3C2 /* CodeEditorView */; };
 		C4FE313828CE7E0C003CBAAE /* SoftwareSparksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE313728CE7E0C003CBAAE /* SoftwareSparksApp.swift */; };
 		C4FE313A28CE7E0C003CBAAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE313928CE7E0C003CBAAE /* ContentView.swift */; };
 		C4FE313C28CE7E0F003CBAAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE313B28CE7E0F003CBAAE /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46CE06228CED2E600ECB3C2 /* CodeEditorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = SoftwareSparks;
+			packageProductDependencies = (
+				C46CE06128CED2E600ECB3C2 /* CodeEditorView */,
+			);
 			productName = SoftwareSparks;
 			productReference = C4FE313428CE7E0C003CBAAE /* SoftwareSparks.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = C4FE312B28CE7E0C003CBAAE;
+			packageReferences = (
+				C46CE06028CED2E600ECB3C2 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
+			);
 			productRefGroup = C4FE313528CE7E0C003CBAAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C46CE06028CED2E600ECB3C2 /* XCRemoteSwiftPackageReference "CodeEditorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchakravarty/CodeEditorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C46CE06128CED2E600ECB3C2 /* CodeEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C46CE06028CED2E600ECB3C2 /* XCRemoteSwiftPackageReference "CodeEditorView" */;
+			productName = CodeEditorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C4FE312C28CE7E0C003CBAAE /* Project object */;
 }

@@ -12,17 +12,23 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.4.5",
     "@types/defaults": "^1.0.3",
     "defaults": "^1.0.3",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
+    "monaco-languageclient": "^4.0.0",
     "react": "^18.2.0",
     "react-console-emulator": "^5.0.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-monaco-editor": "^0.50.1",
     "react-router-dom": "6",
     "sass": "^1.54.8",
     "xterm": "^4.19.0"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
