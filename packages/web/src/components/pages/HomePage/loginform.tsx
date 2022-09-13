@@ -9,26 +9,23 @@ import '../../../lib/sass/pages/LoginForm.scss';
 
 export default function LoginForm(props: props) {
   return (
-    <div className="login-form">
-      <div className="login-form__header">
-        <h1 className="login-form__title">Login</h1>
-        <p className="login-form__subtitle">Welcome back!</p>
-      </div>
-      <div className="login-form__body">
-        <div className="login-form__input">
-          <label className="login-form__label">Email</label>
-          <input className="login-form__input-field" type="email" />
-        </div>
-        <div className="login-form__input">
-          <label className="login-form__label">Password</label>
-          <input className="login-form__input-field" type="password" />
-        </div>
-        <div className="login-form__input">
-          <button className="login-form__button" type="button" onClick={props.handleSubmit}>
-            Login
-          </button>
-        </div>
-      </div>
+    <div className="w-auto h-64 bg-slate-500 text-black">
+      <form className="p-4 border-slate-700 rounded-lg">
+        <label className="flex justify-between color-black text-2xl">
+          Username:
+          <input type="text" className="ml-2" />
+        </label>
+        <label className="flex justify-between color-black text-2xl mt-10 border-slate-700 rounded-lg">
+          Password:
+          <input type="password" className="" />
+        </label>
+        <button
+          type="submit"
+          onClick={props.handleSubmit}
+          className="w-32 bg-slate-800 p-4 h-auto border borer-slate-700 rounded-xl mt-10 ml-36 text-white">
+          Submit
+        </button>
+      </form>
     </div>
   );
 }

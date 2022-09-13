@@ -1,4 +1,7 @@
+/* eslint-disable no-prototype-builtins */
 import CommandFile from './commands.json';
+import * as fs from 'fs-extra';
+const share = './share';
 
 class CommandHandler {
   helpCommand() {
@@ -8,6 +11,16 @@ class CommandHandler {
     }
 
     return result;
+  }
+
+  lsCommand(): any {
+    fs.readdirSync(share).forEach((file) => {
+      console.log(file);
+    });
+  }
+
+  nodeCommand(command: string): string {
+    return command;
   }
 
   checkCommand(command: string): boolean {
@@ -25,8 +38,10 @@ class CommandHandler {
         return this.helpCommand();
       case 'clear':
         return '';
+      case 'node':
+        return this.nodeCommand(command);
       case 'ls':
-        return 'ls';
+        return this.lsCommand();
       case 'exit':
         return 'exit';
       default:

@@ -5,6 +5,10 @@
             "description": "Displays this help message"
         },
         {
+            "command": "node",
+            "description": "Run Javascript code inside the editor"
+        },
+        {
             "command": "ls",
             "description": "List files in current directory"
         },
@@ -64,5 +68,8 @@
     },
     "clear": {
         "description": "Clear the screen"
+    },
+    "node": {
+        "description": "Run Javascript code inside the editor"
     }
 }

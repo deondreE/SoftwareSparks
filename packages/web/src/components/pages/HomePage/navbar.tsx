@@ -9,7 +9,7 @@ function Navbar({ additions }: { additions: React.ReactNode }) {
       <div>
         <img src={Logo} className="navbar-logo" />
       </div>
-      {additions}
+      <div className="flex justify-evenly">{additions}</div>
     </div>
   );
 }

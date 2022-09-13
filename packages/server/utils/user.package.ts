@@ -1,6 +1,5 @@
-import {PrismaClient, User} from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { PrismaClient } from '@prisma/client';
+import prisma from '../db/init';
 
 async function createUser(email: string, name: string) {
     return await prisma.user.create({
@@ -11,13 +10,13 @@ async function createUser(email: string, name: string) {
     });
 }
 
-async function getAllUsers(): Promise<User[]> {
+async function getAllUsers() {
     const users = await prisma.user.findMany();
 
     return users;
 }
 
-async function getUserById(id: number): Promise<User> {
+async function getUserById(id: number) {
     const user = await prisma.user.findUnique({
         where: {
             id,
@@ -34,8 +33,9 @@ async function addUserRole(userId: number, roleName: string, roleColor: string):
             id: userId,
         },
         data: {
-            roles: {
+            Role: {
                 create: {
+                    // Create a new role for the user.
                     name: roleName,
                     color: roleColor,
                 },
