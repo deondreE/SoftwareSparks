@@ -43,6 +43,9 @@ If you would like to contribute to this project, please read the [CONTRIBUTING.m
 
 ---
 
+### Mvp Requirements
+[Click Here](./docs/MVP.md)
+
 ### License
 
 This project is licensed under the [GPL License](.docs/LICENSE.md).
