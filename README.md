@@ -39,10 +39,10 @@ Software Sparks is a platform for developers to use on the go. It features a ful
 
 ### Contributing
 
-If you would like to contribute to this project, please read the [CONTRIBUTING.md]('./docs/Contributing.md') file.
+If you would like to contribute to this project, please read the [CONTRIBUTING.md](./docs/Contributing.md) file.
 
 ---
 
 ### License
 
-This project is licensed under the [MIT License]('.docs/LICENSE.md').
+This project is licensed under the [MIT License](.docs/LICENSE.md).
