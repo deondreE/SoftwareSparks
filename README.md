@@ -45,4 +45,4 @@ If you would like to contribute to this project, please read the [CONTRIBUTING.m
 
 ### License
 
-This project is licensed under the [MIT License](.docs/LICENSE.md).
+This project is licensed under the [GPL License](.docs/LICENSE.md).
