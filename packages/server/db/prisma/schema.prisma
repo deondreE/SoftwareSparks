@@ -23,15 +23,15 @@ model User {
 }
 
 model File {
-  id     Int     @id @default(autoincrement())
+  id   Int    @id @default(autoincrement())
   name String
   path String
   Dir  Dir?
 }
 
 model Dir {
-  id     Int     @id @default(autoincrement())
-  name String
-  path String
-  Files File    @relation(fields: [id], references: [id])
+  id    Int    @id @default(autoincrement())
+  name  String
+  path  String
+  Files File   @relation(fields: [id], references: [id])
 }
