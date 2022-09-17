@@ -17,16 +17,16 @@ struct ContentView: View {
                 NavigationLink(destination: ClassesView()) {
                     Label ("Classes", systemImage: "book")
                 }
-                Label ("Classes", systemImage: "book")
+                NavigationLink (destination: CodeEditorView()){
+                    Label ("CodeEditor", systemImage: "book")
+                }
+                NavigationLink (destination: TerminalView()) {
+                    Label ("Terminal Testing Link", systemImage: "book")
+                }
             }
             .navigationTitle("Learn")
             .toolbar {
                 ToolbarItem(placement: .navigation) {
-//                    Button {
-//                        self.isActive.toggle()
-//                    } label: {
-//                        Label("Toolbar Toggle",   systemImage: "line.3.horizontal.circle.fill")
-//                    }
                     NavigationLink (destination: SettingsView(active: isActive)) {
                         Button {
                             self.isActive.toggle()

@@ -13,6 +13,10 @@
 		C4631FA228D222490053F66A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4631FA128D222490053F66A /* Preview Assets.xcassets */; };
 		C4631FAB28D222830053F66A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4631FAA28D222830053F66A /* SettingsView.swift */; };
 		C4631FAD28D2228E0053F66A /* ClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4631FAC28D2228E0053F66A /* ClassesView.swift */; };
+		C4A22FA428D56200008D49A3 /* CodeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FA328D56200008D49A3 /* CodeEditor.swift */; };
+		C4A22FA628D56248008D49A3 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FA528D56248008D49A3 /* Editor.swift */; };
+		C4A22FAA28D56268008D49A3 /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FA928D56268008D49A3 /* Terminal.swift */; };
+		C4A22FAC28D5650B008D49A3 /* KeyPressed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FAB28D5650B008D49A3 /* KeyPressed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C4631FA328D222490053F66A /* macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macos.entitlements; sourceTree = "<group>"; };
 		C4631FAA28D222830053F66A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C4631FAC28D2228E0053F66A /* ClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesView.swift; sourceTree = "<group>"; };
+		C4A22FA328D56200008D49A3 /* CodeEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditor.swift; sourceTree = "<group>"; };
+		C4A22FA528D56248008D49A3 /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
+		C4A22FA928D56268008D49A3 /* Terminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		C4A22FAB28D5650B008D49A3 /* KeyPressed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPressed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +64,14 @@
 		C4631F9928D222480053F66A /* macos */ = {
 			isa = PBXGroup;
 			children = (
-				C4631FA928D222780053F66A /* Views */,
-				C4631F9A28D222480053F66A /* macosApp.swift */,
-				C4631F9C28D222480053F66A /* ContentView.swift */,
+				C4A22FA728D56257008D49A3 /* Terminal */,
+				C4A22FA228D561F3008D49A3 /* CodeEditor */,
 				C4631F9E28D222490053F66A /* Assets.xcassets */,
+				C4631F9C28D222480053F66A /* ContentView.swift */,
 				C4631FA328D222490053F66A /* macos.entitlements */,
+				C4631F9A28D222480053F66A /* macosApp.swift */,
 				C4631FA028D222490053F66A /* Preview Content */,
+				C4631FA928D222780053F66A /* Views */,
 			);
 			path = macos;
 			sourceTree = "<group>";
@@ -81,6 +91,24 @@
 				C4631FAC28D2228E0053F66A /* ClassesView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C4A22FA228D561F3008D49A3 /* CodeEditor */ = {
+			isa = PBXGroup;
+			children = (
+				C4A22FA328D56200008D49A3 /* CodeEditor.swift */,
+				C4A22FA528D56248008D49A3 /* Editor.swift */,
+			);
+			path = CodeEditor;
+			sourceTree = "<group>";
+		};
+		C4A22FA728D56257008D49A3 /* Terminal */ = {
+			isa = PBXGroup;
+			children = (
+				C4A22FA928D56268008D49A3 /* Terminal.swift */,
+				C4A22FAB28D5650B008D49A3 /* KeyPressed.swift */,
+			);
+			path = Terminal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4631FAB28D222830053F66A /* SettingsView.swift in Sources */,
+				C4A22FA428D56200008D49A3 /* CodeEditor.swift in Sources */,
+				C4A22FAC28D5650B008D49A3 /* KeyPressed.swift in Sources */,
 				C4631FAD28D2228E0053F66A /* ClassesView.swift in Sources */,
 				C4631F9D28D222480053F66A /* ContentView.swift in Sources */,
+				C4A22FA628D56248008D49A3 /* Editor.swift in Sources */,
 				C4631F9B28D222480053F66A /* macosApp.swift in Sources */,
+				C4A22FAA28D56268008D49A3 /* Terminal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +320,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"macos/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +346,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"macos/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
