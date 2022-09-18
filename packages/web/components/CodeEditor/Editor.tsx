@@ -6,6 +6,9 @@ import { okaidia } from '@uiw/codemirror-theme-okaidia';
 import { javascript } from '@codemirror/lang-javascript';
 import { python } from '@codemirror/lang-python';
 import { rust } from '@codemirror/lang-rust';
+import { cpp } from '@codemirror/lang-cpp';
+import Terminal from '../Terminal/Terminal';
+import Sidebar from '../Interface/sidebar';
 
 interface props {
     language: string;
@@ -13,15 +16,18 @@ interface props {
 
 function Editor({ language }: props) {
     const [value, setValue] = useState('');
+    const [open, isOpen] = useState(true );
 
     const setExtenstions = (language: string) => {
       switch (language) {
-          case 'Javascript':
+          case 'Javascript':  
               return javascript();
           case 'Python':
               return python();
           case 'Rust':
               return rust();
+          case 'C++':
+              return cpp();
           default:
               return javascript();
         }
@@ -31,12 +37,16 @@ function Editor({ language }: props) {
         switch (language) {
             case 'Javascript':
                 return `console.log('Hello World!');`;
+            case 'Typescript':
+                return `console.log('Hello World!');`;
             case 'Python':
                 return `print('Hello World!')`;
             case 'Rust':
                 return `fn main() { \n println!("Hello World!");\n }`;
             case 'Go':
                 return `package main\n\nimport "fmt"\n\nfunc main() { \n fmt.Println("Hello World!")\n }`;
+            case 'C++':
+                return `#include <iostream>\n\nint main() {\n std::cout << "Hello World!";\n return 0;\n }`;
             default:
                 return `console.log('Hello World!');`;
         }
@@ -67,7 +77,14 @@ function Editor({ language }: props) {
         >
           Run Code
         </button>
+        <div 
+          className="bg-slate-300 p-6 border rounded-lg float-left z-10"
+        >
+          {/* // arrow image */}
+          {open && <Sidebar />}
+        </div>
         </CodeMirror>
+        <Terminal prompt='$' username='deondreenglish' />
       </>
     );
 } 
