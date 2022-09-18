@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
-import { okaidia } from '@uiw/codemirror-theme-okaidia';
-
+// import { okaidia } from '@uiw/codemirror-theme-okaidia';
+import { githubDark } from '@uiw/codemirror-theme-github';
 // Langs
 import { javascript } from '@codemirror/lang-javascript';
 import { python } from '@codemirror/lang-python';
@@ -60,7 +60,7 @@ function Editor({ language }: props) {
         <CodeMirror 
           value={setTemplate(language)}
           height={height}
-          theme={okaidia}
+          theme={githubDark}
           extensions={[setExtenstions(language)]}
           onLoad={(e: any) => {
             setValue(e);
@@ -69,14 +69,13 @@ function Editor({ language }: props) {
             setValue(e);
           }}
         >
-        <button 
+        <div 
           onClick={() => {
             console.log(value);
           }}
-          className="bg-slate-500 p-4 mb-24 border-slate-600 rounded-lg float-right"
+          className="bg-transparent"
         >
-          Run Code
-        </button>
+        </div>
         <div 
           className="bg-slate-300 p-6 border rounded-lg float-left z-10"
         >
@@ -85,6 +84,7 @@ function Editor({ language }: props) {
         </div>
         </CodeMirror>
         <Terminal prompt='$' username='deondreenglish' />
+        {/* TODO: ADD White board tab soon */}
       </>
     );
 } 
