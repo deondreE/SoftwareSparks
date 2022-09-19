@@ -1,23 +1,36 @@
 
 import Image from 'next/image'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 
 import plus from '../../public/plus.svg';
+import folder from '../../public/folder.svg';
 
 import returnImage from '../Terminal/FileSystem/image';
 
-import {fileSys} from '../Terminal/FileSystem/fileSystem';
+import {fileSys, createFile, createDir} from '../Terminal/FileSystem/fileSystem';
 
 function Sidebar () {
     const [input, setInput] = useState(false);
-    const [display, setDisplay] = useState('');
+    const [dir, setDir] = useState(false);
 
     const processInput = (e: any) => {
         if (e.key === 'Enter') {
             setInput(false);
-            setDisplay('show');
 
-            fileSys.push({ files: [e.target.value] });
+            let value = e.target.value;
+
+            createFile('files', value);
+        }
+    }
+
+    const processDirInput = (e: any) => {
+        if (e.key === 'Enter') {
+            setDir(false);
+
+            let value = e.target.value;
+
+            createDir(value);
+            console.log(fileSys);
         }
     }
 
@@ -25,14 +38,22 @@ function Sidebar () {
         <div className="w-auto text-left">
             <div>
                 <div className='flex'>
-                    <button className="flex mb-2 bg-white" onClick={() => { 
+                    <button className="flex mb-2\" onClick={() => { 
                             setInput(!input)
-                            setDisplay('hidden')
                         }}>
-                            <Image className={`display: ${display}`} src={plus} alt="Javascript" width={20} height={20} />
+                            <Image className={`${input ? 'hidden' : 'block'}`} src={plus} alt="Javascript" width={20} height={20} />
                             {/* TODO: ADD TOOLTIP */}
                     </button>
+                    <button
+                        onClick={() => {
+                            setDir(!dir)
+                        }}
+                        className={`ml-2 ${dir ? 'hidden' : 'block'}`}
+                    >
+                        <Image className={``} src={folder} alt="Javascript" width={20} height={20} />
+                    </button>
                     {input && <input onKeyDown={(e: any) => {processInput(e)}} type="text" placeholder='filename' className="bg-slate-300 p-2 rounded-lg" />}
+                    {dir && <input onKeyDown={(e: any) => {processDirInput(e)}} type="text" placeholder='dirName' className="bg-slate-300 p-2 rounded-lg" />}
                 </div>
                 {fileSys.map((item: any, i: any) => {
                     return (

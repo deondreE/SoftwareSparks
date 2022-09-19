@@ -16,14 +16,18 @@
     "@uiw/codemirror-themes": "^4.12.3",
     "@uiw/react-codemirror": "^4.12.3",
     "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
+    "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10.4.11",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
