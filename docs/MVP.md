@@ -11,10 +11,10 @@ A page where users can download the software.
 ---
 ## Code Running / Editing Support for:
 
-- [ ] Javascript
-- [ ] Python
-- [ ] Typescript
-- [ ] C++
+- [x] Javascript
+- [x] Python
+- [x] Typescript
+- [x] C++
 
 ---
 
