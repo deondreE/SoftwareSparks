@@ -1,3 +1,5 @@
+import { createDir, deleteDir, listDir } from '../Terminal/FileSystem/fileSystem';
+
 
 function Terminal ({prompt, username}: {prompt: string, username: string}) {
     const runCommand = (command: string) => {
@@ -24,11 +26,27 @@ function Terminal ({prompt, username}: {prompt: string, username: string}) {
                 i.value = `${prompt}`;
                 break;
             case 'ls':
-                d.innerHTML += `NOT IMPLEMENTED`;
+                d.innerHTML += `<p class="p-2 bg-white text-black">${listDir('files')}</p>`;
+                i.value = `${prompt}`;
+                break;
+            case 'rm':
+                if (!args) {
+                    d.innerHTML += `<p class="p-2 bg-red-200 text-red-600">rm: missing operand</p>`;
+                    break;
+                }
+                deleteDir(args);
+                d.innerHTML += `<p class="p-2 bg-white text-black"></p>`;
                 i.value = `${prompt}`;
                 break;
             case 'pwd':
                 d.innerHTML += `<p class="p-2 bg-white text-blue-500">${userDir}</p>`;
+                i.value = `${prompt}`;
+                break;
+            case 'mkdir':
+                if (!args) {
+                    d.innerHTML += `<p class="p-2 bg-white text-red-500">mkdir: missing operand</p>`;
+                }
+                createDir(args);
                 i.value = `${prompt}`;
                 break;
             default:   
