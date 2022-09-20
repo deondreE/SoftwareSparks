@@ -5,24 +5,24 @@ import logo from '../../public/logo.svg';
 function NavBar () {    
     return (
         <div className='flex justify-center align-top'>
-            <div className='float-left relative left-8 first-line:top-1 p-2'>
+            <div className='float-left relative left-8 first-line:top-1 p-2 bg-transparent'>
                 <Image className='' src={logo} alt='dev' width={165} height={40} />
             </div>
             <div className='flex relative top-1 left-32 p-2 w-auto h-auto align-top'>
                 <div className=''>
-                    <p>Home</p>
+                    <a href='/' className='hover:underline'>Home</a>
                 </div>
                 <div className='ml-4'>
-                    <p>Code</p>
+                    <a href='/code' className='hover:underline'>Code</a>
                 </div>
                 <div className='ml-4'>
-                    <p>About</p>
+                    <a href='/about' className='hover:underline'>About</a>
                 </div>
                 <div className='ml-4'>
-                    <button className='hover:underline'><i><b>Roadmap</b></i></button>
+                    <a href='/roadmap' className='hover:underline'><i><b>Roadmap</b></i></a>
                 </div>
                 <div className='ml-96'>
-                    <p>Login</p>
+                    <button>Login</button>
                 </div>
             </div>
         </div>

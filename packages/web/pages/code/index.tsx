@@ -9,12 +9,14 @@ import rs from '../../public/rust.svg';
 import cpp from '../../public/cpp.svg';
 import { useState } from 'react';
 import Editor from '../../components/CodeEditor/Editor';
+import NavBar from '../../components/HomePage/navbar';
 
 function Page() {
     const [title, setTitle] = useState('Javascript');
     
     return (
         <div className='bg-blue-200'>
+            <NavBar />
             <div className='w-full bg-blue-200 p-4 h-auto'>
                 <Dropdown
                  setTitle={setTitle}
