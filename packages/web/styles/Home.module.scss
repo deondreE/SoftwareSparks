@@ -1,6 +1,36 @@
 @import './_variables';
 // ------------------------------------
 
+//
+.pageheading {
+    color: $base-dark-page-title;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5rem;
+    padding: .1em;
+    text-align: left;
+}
+
+// sign in button
+.signinbutton {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: 600;
+
+    margin-top: 50px;    
+    height: 3em;
+    width: 10em;
+
+    border: 1px solid $white;   
+    border-radius: 5px;
+
+    position: absolute;
+    top: 1%;
+    right: 12px;
+
+    color: $black;
+    background-color: $base-dark-button-color;  
+}
+
 .footer {
     background-color: $base-dark-tb;
     color: $white;
@@ -62,4 +92,38 @@
     border-radius: 15px;
     border: none;
     cursor: pointer;
+}
+
+// Editor Example 
+// ------------------------------------
+
+.editor {
+    background-color: $base-dark-th;
+    color: $white;
+    padding: 1rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: left;
+    justify-items: left;
+
+    margin-bottom: 2ecenterm;
+
+    a {
+        color: $base-dark-page-title;
+    }    
+}
+
+.editortextarea {
+    float: right;
+    width: 50%;
+    height: 20em;
+    background-color: $base-dark-tc;
+    color: $white;
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    border: none;
+    resize: none;
 }
