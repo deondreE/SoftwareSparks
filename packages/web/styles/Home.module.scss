@@ -127,3 +127,40 @@
     border: none;
     resize: none;
 }
+
+// cube
+// -------------------
+.cube {
+    width: 63px;
+    height: 60px;
+    transform-style: preserve-3d;
+    padding: 1.2rem;
+    transform: rotateX(241deg) rotateY(-10deg) rotateZ(-155deg);
+  }
+  
+  .side {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 10%;
+  }
+  
+  .top {
+    transform: translateZ(-60px);
+    background: #BB86FC;
+  }
+  
+  .front {
+    transform: rotateX(91deg);
+    transform-origin: bottom;
+    background: #1F1A24;
+  }
+  
+  .left {
+    width: 62px;
+    transform: translateZ(-61px) rotateY(91deg);
+    transform-origin: right;
+    background: #272030;
+  }

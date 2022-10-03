@@ -6,6 +6,10 @@ import styles from '../styles/Home.module.scss'
 import Logo from '../public/logo.svg';
 
 const Home: NextPage = () => {
+  const top = `${styles.side} ${styles.top}`;
+  const left = `${styles.side} ${styles.left}`;
+  const front = `${styles.side} ${styles.front}`;
+
   return (
     <div>
       <Head>
@@ -19,6 +23,15 @@ const Home: NextPage = () => {
           <Image src={Logo} alt='Working dev...' width={64} height={1} />
           <h1 className={styles.pageheading}>Software Sparks</h1>
           <button className={styles.signinbutton}>Sign in</button>
+        </div>
+        {/* 3d cube Of programing languages */}
+        <div className='grid grid-cols-2'>
+          <div className={styles.cube}>
+            <div className={top}></div>
+            <div className={left}></div>
+            <div className={front}></div>
+          </div>
+          <div></div> 
         </div>
         {/* Editor Example */}
         <div className='grid bg-slate-800 grid-cols-2 p-8 mb-12'>
