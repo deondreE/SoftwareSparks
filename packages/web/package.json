@@ -9,11 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.1.0",
+    "@react-three/fiber": "^8.8.8",
+    "@types/three": "^0.144.0",
+    "@uiw/codemirror-theme-dracula": "^4.12.3",
+    "@uiw/react-codemirror": "^4.12.3",
     "axios": "^0.27.2",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.55.0"
+    "react-google-button": "^0.7.2",
+    "sass": "^1.55.0",
+    "three": "^0.145.0"
   },
   "devDependencies": {
     "@types/node": "18.7.23",

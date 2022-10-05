@@ -1,3 +1,9 @@
+import CodeMirror from '@uiw/react-codemirror';
+import { javascript } from '@codemirror/lang-javascript';
+import { dracula } from '@uiw/codemirror-theme-dracula';
+
+import GoogleButton from 'react-google-button';
+
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -5,11 +11,21 @@ import styles from '../styles/Home.module.scss'
 
 import Logo from '../public/logo.svg';
 
-const Home: NextPage = () => {
-  const top = `${styles.side} ${styles.top}`;
-  const left = `${styles.side} ${styles.left}`;
-  const front = `${styles.side} ${styles.front}`;
 
+const Editor = () => {
+  return (
+    <CodeMirror
+      value="console.log('hello world!');"
+      height="300px"
+      extensions={[javascript({ jsx: true })]}
+      theme={dracula}
+      className='text-black rounded-xl'
+      onChange={(value) => console.log(value)}
+    />
+  );
+};
+
+const Home: NextPage = () => {
   return (
     <div>
       <Head>
@@ -22,25 +38,33 @@ const Home: NextPage = () => {
         <div className='flex'>
           <Image src={Logo} alt='Working dev...' width={64} height={1} />
           <h1 className={styles.pageheading}>Software Sparks</h1>
-          <button className={styles.signinbutton}>Sign in</button>
+          <GoogleButton className={styles.signinbutton} />
         </div>
         {/* 3d cube Of programing languages */}
-        <div className='grid grid-cols-2'>
-          <div className={styles.cube}>
-            <div className={top}></div>
-            <div className={left}></div>
-            <div className={front}></div>
-          </div>
+        <div className='grid grid-cols-2'>  
           <div></div> 
         </div>
+
         {/* Editor Example */}
-        <div className='grid bg-slate-800 grid-cols-2 p-8 mb-12'>
-          <div className='grid grid-cols-2'>
-            <h2 className='font-sans text-2xl text-center'>Push this button to run the code</h2>
-            <button className='p-0 bg-slate-200 w-24 h-8 rounded-md text-black hover:text-white'>Button</button>
-            <button className='p-0 bg-slate-200 w-24 h-8 rounded-md text-black hover:text-white'>Settings</button>
+        <div className='grid grid-cols-2 gap-10 p-8 mb-12 rounded-lg' style={{
+          background: '#3c304d'
+        }}>
+          <div className=''>
+              <div className='flex p-4 text-left h-full font-serif rounded-lg' style={{
+                background: '#514463',
+                fontFamily: 'Raleway',
+              }}>  
+                <p className='text-2xl font-light' style={{
+                  color: '#e6cc00'
+                }}>
+                  By default we support Javascript, Typescript, Python, C++, and Java. We plan to add more languages in the future. 
+                  You can also add your own custom languages. Just make sure to add the language to the setting.json file. And make sure it works
+                  inside out built in bash terminal. Everything is 100% open source, so you can see how it works. Also, it is 100% Customizable.
+                </p>
+              </div>
           </div>
-          <textarea className='w-full h-32 text-black'></textarea>
+          <Editor />
+          {/* <textarea className='w- full h-32 text-black'></textarea> */}
         </div>
 
         <div className='text-3xl'>

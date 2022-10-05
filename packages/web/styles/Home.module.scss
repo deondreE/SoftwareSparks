@@ -6,29 +6,25 @@
     color: $base-dark-page-title;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 5rem;
-    padding: .1em;
+    // padding: .1em;
+    margin-left: 16px;
     text-align: left;
+
+    position: relative;
+    top: 0;
 }
 
 // sign in button
 .signinbutton {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: large;
-    font-weight: 600;
+    font-size: 2rem;
 
-    margin-top: 50px;    
-    height: 3em;
-    width: 10em;
-
-    border: 1px solid $white;   
+    // position
+    margin-top: 45px;    
     border-radius: 5px;
-
+    // position
     position: absolute;
     top: 1%;
     right: 12px;
-
-    color: $black;
-    background-color: $base-dark-button-color;  
 }
 
 .footer {
