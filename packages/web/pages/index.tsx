@@ -1,7 +1,4 @@
-import CodeMirror from '@uiw/react-codemirror';
-import { javascript } from '@codemirror/lang-javascript';
-import { dracula } from '@uiw/codemirror-theme-dracula';
-
+import Editor from "@monaco-editor/react";
 import GoogleButton from 'react-google-button';
 
 import type { NextPage } from 'next'
@@ -12,15 +9,12 @@ import styles from '../styles/Home.module.scss'
 import Logo from '../public/logo.svg';
 
 
-const Editor = () => {
+const TextEditor = () => {
   return (
-    <CodeMirror
-      value="console.log('hello world!');"
-      height="300px"
-      extensions={[javascript({ jsx: true })]}
-      theme={dracula}
-      className='text-black rounded-xl'
-      onChange={(value) => console.log(value)}
+    <Editor 
+      height="20vh"
+      defaultLanguage="javascript"
+      defaultValue="// type your code..."
     />
   );
 };
@@ -63,7 +57,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
           </div>
-          <Editor />
+          <TextEditor />
           {/* <textarea className='w- full h-32 text-black'></textarea> */}
         </div>
 

@@ -9,11 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@codemirror/lang-javascript": "^6.1.0",
+    "@monaco-editor/react": "^4.4.6",
     "@react-three/fiber": "^8.8.8",
     "@types/three": "^0.144.0",
-    "@uiw/codemirror-theme-dracula": "^4.12.3",
-    "@uiw/react-codemirror": "^4.12.3",
     "axios": "^0.27.2",
     "next": "12.3.1",
     "react": "18.2.0",
