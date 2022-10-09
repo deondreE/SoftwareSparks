@@ -1,5 +1,7 @@
 // Dark theme variables
 // ------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 $base-dark-th: #121212;
 $base-dark-tb: #1f1A24;
 $base-dark-tc: #332940;
@@ -7,10 +9,13 @@ $base-dark-lbg: #514463;
 $base-dark-cn-bg: #3c304d;
 // ---------------------
 $base-dark-page-title: #BB86FC;
+$base-dark-color-tx1: #c9740c;
 $base-dark-button-color: #03DAC5;
 $base-dark-error: #271c1e;
 $base-dark-warning: #e6cc00;
-
+// --------------------
+$popins: 'Poppins', sans-serif;
+$roboto: 'Roboto', sans-serif;
 
 $black: #000000;
 $white: #FFFFFF;

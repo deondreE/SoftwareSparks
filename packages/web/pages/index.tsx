@@ -1,4 +1,4 @@
-import Editor from "@monaco-editor/react";
+// import Editor from "@monaco-editor/react";
 import GoogleButton from 'react-google-button';
 
 import type { NextPage } from 'next'
@@ -8,16 +8,20 @@ import styles from '../styles/Home.module.scss'
 
 import Logo from '../public/logo.svg';
 
+import * as FaIcons from 'react-icons/fa';
+import LanguageList from '../components/language-list';
 
-const TextEditor = () => {
-  return (
-    <Editor 
-      height="20vh"
-      defaultLanguage="javascript"
-      defaultValue="// type your code..."
-    />
-  );
-};
+
+// const TextEditor = () => {
+//   return (
+//     // <Editor 
+//     //   height="20vh"
+//     //   defaultLanguage="javascript"
+//     //   defaultValue="// type your code..."
+//     // />
+//     // <Editor language='javascript' />
+//   );
+// };
 
 const Home: NextPage = () => {
   return (
@@ -34,41 +38,72 @@ const Home: NextPage = () => {
           <h1 className={styles.pageheading}>Software Sparks</h1>
           <GoogleButton className={styles.signinbutton} />
         </div>
-        {/* 3d cube Of programing languages */}
-        <div className='grid grid-cols-2'>  
-          <div></div> 
+        {/* Language Support */}
+        <div className='grid grid-cols-2 gap-5 p-8 mb-12 rounded-lg'>
+          <div>
+            <h1 
+              className='text-4xl font-bold font-serif text-white mt-12 w-full p-4 rounded-lg'
+              style={{ color: '#c9740c' }}
+              >
+              We speak multiple languages...
+            </h1>
+            <div className={styles.ft}>
+                  <p 
+                    className='text-gray-300 p-6 text-.5xl'
+                    style={{ textAlign: 'left', width: '80%', fontFamily: 'arial'}}
+                  >
+                   Theres nothing more frustrating then lokking up a coding tutorial and it not being in the language that you program in.
+                    We have a wide range of languages that we support and we are always adding more. <b>Here are the languages that we currently support:</b>
+                  </p>
+            </div>
+            {/* Lnaguage lIst */}
+            <LanguageList />
+          </div>
         </div>
 
+
         {/* Editor Example */}
-        <div className='grid grid-cols-2 gap-10 p-8 mb-12 rounded-lg' style={{
-          background: '#3c304d'
-        }}>
-          <div className=''>
-              <div className='flex p-4 text-left h-full font-serif rounded-lg' style={{
-                background: '#514463',
-                fontFamily: 'Raleway',
-              }}>  
-                <p className='text-2xl font-light' style={{
-                  color: '#e6cc00'
-                }}>
-                  By default we support Javascript, Typescript, Python, C++, and Java. We plan to add more languages in the future. 
-                  You can also add your own custom languages. Just make sure to add the language to the setting.json file. And make sure it works
-                  inside out built in bash terminal. Everything is 100% open source, so you can see how it works. Also, it is 100% Customizable.
-                </p>
+        <hr style={{ width: '100%' }}/>
+        <div className='grid grid-cols-2 gap-5 p-8 mb-12 rounded-lg'>
+          <div className={styles.tl}>
+              <div className='flex flex-col'>
+                <h1 
+                  className='text-4xl font-bold font-serif text-white mt-12 w-full p-4 rounded-lg'
+                  style={{ color: '#c9740c' }}
+                >The ideal coding environment.</h1>
+                <div className={styles.ft}>
+                  <p 
+                    className='text-gray-300 p-6 text-.5xl'
+                    style={{ textAlign: 'left', width: '80%', fontFamily: 'arial'}}
+                  >
+                    In an ideal world, you would be able to download your preferd code editor and set it up on your system through some extension based system.
+                    Our Edior does all of this, but it all is built in and <b>STILL</b> fast⚡️.
+                  </p>
+                </div>
+                  <div className='p-6'>
+                    <button
+                      className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/3'
+                    >Try our Workspace</button>
+                  </div>
               </div>
           </div>
-          <TextEditor />
+          {/* <TextEditor /> */}
           {/* <textarea className='w- full h-32 text-black'></textarea> */}
         </div>
 
         <div className='text-3xl'>
           <div className='text-center grid grid-cols-3 gap-4'>
             <div className={styles.gridcontainer}>
-              <h1 className={styles.heading}>
+              <h1 className={styles.heading}
+                  style={{
+                    textDecoration: 'underline',
+                    textShadow: '0 0 1.5px #e6cc00',
+                  }}>
                 Create the unfathomable
               </h1>
               <p className={styles.content}>
-                Create porjects that will change the world... Never underestimate the power of a single `Hello World`. This project aims to show developers they are not limited by their skill level. Just hit create new project if you get stuck the classes are there to help.
+                Create porjects that will change the world... Never underestimate the power of a single `Hello World`. This project aims to show developers they are not limited by their skill level. Just hit create new project if you get stuck the classes are there to help. 
+                And grow in your Software Development Skills.
               </p>
               <button className={styles.button}>Learn more...</button>
             </div>
@@ -78,6 +113,7 @@ const Home: NextPage = () => {
               </h1>
               <p className={styles.content}>
                 Our new code editing expirence will change the speed in which you code. No more waiting for the compiler. Create your own custom editor with our new editor API. Or, use the one we have created and allow yourself to customize it to your exact liking.
+                This allows you to work at your best.
               </p>
               <button className={styles.button}>Learn more...</button>
             </div>
